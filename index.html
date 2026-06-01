@@ -9,34 +9,29 @@
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    .btn-gold, .btn-ghost{cursor:pointer;display:inline-block}
     body{font-family:'DM Sans',sans-serif;background:#f8f5ef;color:#1a1a2e}
     nav{position:sticky;top:0;z-index:100;background:#0a1628;display:flex;justify-content:space-between;align-items:center;padding:0.75rem 2rem;border-bottom:2px solid #c9a84c}
     .logo{font-family:'Playfair Display',serif;color:#c9a84c;font-size:1.1rem;font-weight:700;letter-spacing:1px}
     .nav-links{display:flex;gap:1.25rem;flex-wrap:wrap}
     .nav-links a{color:#ccc;text-decoration:none;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;transition:color 0.2s}
     .nav-links a:hover{color:#c9a84c}
-
     .hero{background:#0a1628;padding:5rem 2rem 6rem;text-align:center;position:relative;overflow:hidden}
-    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(201,168,76,0.03) 0,rgba(201,168,76,0.03) 1px,transparent 1px,transparent 40px)}
     .hero-badge{display:inline-block;background:rgba(201,168,76,0.15);border:1px solid #c9a84c;color:#c9a84c;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1rem;border-radius:20px;margin-bottom:1.5rem}
     .hero h1{font-family:'Playfair Display',serif;font-size:3.2rem;color:#fff;line-height:1.2;margin-bottom:0.75rem}
     .hero h1 span{color:#c9a84c}
     .hero-sub{color:#c9a84c;font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.25rem}
     .hero p{color:#a0aec0;font-size:0.95rem;max-width:620px;margin:0 auto 2.5rem;line-height:1.9;font-weight:300}
     .hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-    .btn-gold{background:#c9a84c;color:#0a1628;padding:0.75rem 2rem;border-radius:4px;text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:0.5px;transition:background 0.2s}
+    .btn-gold{background:#c9a84c;color:#0a1628;padding:0.75rem 2rem;border-radius:4px;text-decoration:none;font-size:0.85rem;font-weight:500;display:inline-block}
     .btn-gold:hover{background:#e8c97a}
-    .btn-ghost{border:1px solid rgba(255,255,255,0.3);color:#fff;padding:0.75rem 2rem;border-radius:4px;text-decoration:none;font-size:0.85rem;font-weight:300;transition:all 0.2s}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.3);color:#fff;padding:0.75rem 2rem;border-radius:4px;text-decoration:none;font-size:0.85rem;display:inline-block}
     .btn-ghost:hover{border-color:#c9a84c;color:#c9a84c}
-
     .sec{padding:3.5rem 2rem}
     .sec.alt{background:#fff}
     .inner{max-width:880px;margin:0 auto}
     .sec-label{font-size:0.68rem;letter-spacing:3px;text-transform:uppercase;color:#c9a84c;margin-bottom:0.4rem}
     .sec-title{font-family:'Playfair Display',serif;font-size:1.8rem;color:#1a1a2e;margin-bottom:0.4rem}
     .divider{width:40px;height:2px;background:#c9a84c;margin-bottom:1.75rem}
-
     .two-col{display:grid;grid-template-columns:3fr 2fr;gap:2rem}
     .about-text{font-size:0.9rem;line-height:1.95;color:#4a5568}
     .info-card{background:#0a1628;border-radius:8px;padding:1.5rem;color:#fff}
@@ -45,13 +40,11 @@
     .info-row i{color:#c9a84c;font-size:15px;margin-top:2px;flex-shrink:0}
     .info-row a{color:#ccc;text-decoration:none}
     .info-row a:hover{color:#c9a84c}
-
     .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.65rem}
     .skill-pill{background:#fff;border:1px solid #e2ddd5;border-left:3px solid #c9a84c;border-radius:4px;padding:0.7rem 0.95rem;font-size:0.81rem;font-weight:500;color:#1a1a2e}
     .tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.55rem;margin-top:1.25rem}
     .tech-tag{background:#f8f5ef;border:1px solid #e2ddd5;border-radius:4px;padding:0.5rem 0.75rem;font-size:0.78rem;color:#4a5568;display:flex;align-items:center;gap:0.4rem}
     .tech-tag i{color:#c9a84c;font-size:14px}
-
     .project-card{background:#fff;border:1px solid #e2ddd5;border-top:3px solid #c9a84c;border-radius:6px;padding:1.75rem}
     .proj-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.4rem;flex-wrap:wrap;gap:0.5rem}
     .proj-title{font-family:'Playfair Display',serif;font-size:1.1rem;color:#1a1a2e}
@@ -61,30 +54,26 @@
     .proj-list li{margin-bottom:0.35rem}
     .module-tags{display:flex;flex-wrap:wrap;gap:0.45rem;margin-top:1rem}
     .m-tag{background:#0a1628;color:#a0b4d0;font-size:0.7rem;padding:0.22rem 0.6rem;border-radius:3px}
-
     .cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.75rem}
     .cert-card{background:#fff;border:1px solid #e2ddd5;border-radius:6px;padding:1rem 1.1rem;display:flex;align-items:flex-start;gap:0.75rem}
     .cert-icon{background:rgba(201,168,76,0.12);border-radius:6px;padding:0.5rem;flex-shrink:0}
     .cert-icon i{color:#c9a84c;font-size:20px}
     .cert-name{font-size:0.83rem;font-weight:500;color:#1a1a2e;line-height:1.4}
     .cert-issuer{font-size:0.72rem;color:#718096;margin-top:3px}
-
     .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
     .edu-card{background:#fff;border:1px solid #e2ddd5;border-left:3px solid #c9a84c;border-radius:4px;padding:1.1rem 1.25rem}
     .edu-deg{font-weight:500;font-size:0.9rem;color:#1a1a2e}
     .edu-school{font-size:0.8rem;color:#718096;margin-top:4px}
     .edu-year{font-size:0.73rem;color:#c9a84c;margin-top:5px;font-weight:500}
     .edu-spec{font-size:0.76rem;color:#4a5568;margin-top:3px}
-
     .contact-section{background:#0a1628;text-align:center;padding:4rem 2rem}
     .contact-section .sec-label{color:#c9a84c}
     .contact-section .sec-title{color:#fff}
     .contact-section .divider{margin:0 auto 1.75rem}
     .contact-section p{color:#a0aec0;font-size:0.9rem;max-width:520px;margin:0 auto 2.5rem;line-height:1.9}
     .contact-grid{display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap}
-    .c-link{display:flex;align-items:center;gap:0.45rem;border:1px solid rgba(201,168,76,0.4);color:#c9a84c;padding:0.65rem 1.3rem;border-radius:4px;text-decoration:none;font-size:0.82rem;transition:background 0.2s}
+    .c-link{display:flex;align-items:center;gap:0.45rem;border:1px solid rgba(201,168,76,0.4);color:#c9a84c;padding:0.65rem 1.3rem;border-radius:4px;text-decoration:none;font-size:0.82rem}
     .c-link:hover{background:rgba(201,168,76,0.1)}
-
     footer{background:#07101f;text-align:center;padding:1.25rem;font-size:0.73rem;color:#4a5568}
     @media(max-width:640px){
       .hero h1{font-size:2.1rem}
@@ -109,19 +98,17 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-badge">SAP MM Consultant</div>
   <h1>I'm <span>Yash Dahake.</span></h1>
-  <div class="hero-sub">SAP S/4HANA &middot; Materials Management &middot; Procure-to-Pay</div>
-  <p>MBA in Operations Management with SAP MM certification and hands-on experience in procurement, inventory management, and supply chain operations. Helping organizations streamline their SAP MM processes for operational excellence.</p>
+  <div class="hero-sub">SAP S/4HANA · Materials Management · Procure-to-Pay</div>
+  <p>MBA in Operations Management with SAP MM certification and hands-on experience in procurement, inventory management, and supply chain operations.</p>
   <div class="hero-actions">
     <a href="#project" class="btn-gold">View My Project</a>
     <a href="#contact" class="btn-ghost">Let's Connect</a>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section class="sec alt" id="about">
   <div class="inner">
     <div class="sec-label">Who I Am</div>
@@ -131,7 +118,7 @@
       <div class="about-text">
         <p>I am an MBA graduate specializing in Operations Management with a SAP MM certification in SAP S/4HANA. I have hands-on project experience covering the complete Procure-to-Pay cycle — from Purchase Requisition and Purchase Order creation through Goods Receipt and Invoice Verification.</p>
         <br>
-        <p>Through my implementation project at Skillcloud Solutions, I worked on real business process mapping, material and vendor master configuration, UAT testing, and MM-FICO integration support. I am passionate about using SAP to optimize procurement workflows and operational efficiency.</p>
+        <p>Through my implementation project at Skillcloud Solutions, I worked on real business process mapping, material and vendor master configuration, UAT testing, and MM-FICO integration support.</p>
         <br>
         <p>I am actively seeking an opportunity as an SAP MM Consultant where I can apply my technical and functional expertise in a growth-oriented organization.</p>
       </div>
@@ -140,19 +127,14 @@
         <div class="info-row"><i class="ti ti-user"></i> Yash Dahake</div>
         <div class="info-row"><i class="ti ti-map-pin"></i> Nagpur, Maharashtra</div>
         <div class="info-row"><i class="ti ti-phone"></i> +91 9503596026</div>
-        <div class="info-row"><i class="ti ti-mail"></i>
-          <a href="mailto:yash.dahake99@gmail.com">yash.dahake99@gmail.com</a>
-        </div>
-        <div class="info-row"><i class="ti ti-brand-linkedin"></i>
-          <a href="https://www.linkedin.com/in/dahake-yash" target="_blank">linkedin.com/in/dahake-yash</a>
-        </div>
+        <div class="info-row"><i class="ti ti-mail"></i><a href="mailto:yash.dahake99@gmail.com">yash.dahake99@gmail.com</a></div>
+        <div class="info-row"><i class="ti ti-brand-linkedin"></i><a href="https://www.linkedin.com/in/dahake-yash" target="_blank">linkedin.com/in/dahake-yash</a></div>
         <div class="info-row"><i class="ti ti-language"></i> English, Hindi, Marathi</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
 <section class="sec" id="skills">
   <div class="inner">
     <div class="sec-label">What I Know</div>
@@ -168,11 +150,11 @@
       <div class="skill-pill">Purchase Order (PO)</div>
       <div class="skill-pill">Goods Receipt (GR)</div>
       <div class="skill-pill">Invoice Verification</div>
-      <div class="skill-pill">RFQ &amp; Quotation</div>
+      <div class="skill-pill">RFQ & Quotation</div>
       <div class="skill-pill">Stock Transfer Process</div>
       <div class="skill-pill">Release Strategy</div>
       <div class="skill-pill">SAP Documentation</div>
-      <div class="skill-pill">MM–FICO Integration</div>
+      <div class="skill-pill">MM-FICO Integration</div>
     </div>
     <div style="margin-top:1.75rem">
       <div class="sec-label" style="margin-bottom:0.5rem">Technical Tools</div>
@@ -188,7 +170,6 @@
   </div>
 </section>
 
-<!-- PROJECT -->
 <section class="sec alt" id="project">
   <div class="inner">
     <div class="sec-label">Experience</div>
@@ -197,7 +178,7 @@
     <div class="project-card">
       <div class="proj-header">
         <div class="proj-title">SAP MM Implementation Project</div>
-        <span class="badge">May 2025 – Present &middot; 1 Year</span>
+        <span class="badge">May 2025 – Present · 1 Year</span>
       </div>
       <div class="proj-company"><i class="ti ti-building" style="font-size:13px;vertical-align:-1px"></i> Skillcloud Solutions Pvt. Ltd.</div>
       <ul class="proj-list">
@@ -223,7 +204,6 @@
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
 <section class="sec" id="certifications">
   <div class="inner">
     <div class="sec-label">Credentials</div>
@@ -232,37 +212,24 @@
     <div class="cert-grid">
       <div class="cert-card">
         <div class="cert-icon"><i class="ti ti-award"></i></div>
-        <div>
-          <div class="cert-name">SAP Certified Associate – SAP S/4HANA</div>
-          <div class="cert-issuer">Techtonic-Lab</div>
-        </div>
+        <div><div class="cert-name">SAP Certified Associate – SAP S/4HANA</div><div class="cert-issuer">Techtonic-Lab</div></div>
       </div>
       <div class="cert-card">
         <div class="cert-icon"><i class="ti ti-certificate"></i></div>
-        <div>
-          <div class="cert-name">SAP Global Certification</div>
-          <div class="cert-issuer">SAP Certifications</div>
-        </div>
+        <div><div class="cert-name">SAP Global Certification</div><div class="cert-issuer">SAP Certifications</div></div>
       </div>
       <div class="cert-card">
         <div class="cert-icon"><i class="ti ti-truck-delivery"></i></div>
-        <div>
-          <div class="cert-name">Supply Chain Logistics</div>
-          <div class="cert-issuer">Coursera</div>
-        </div>
+        <div><div class="cert-name">Supply Chain Logistics</div><div class="cert-issuer">Coursera</div></div>
       </div>
       <div class="cert-card">
         <div class="cert-icon"><i class="ti ti-settings"></i></div>
-        <div>
-          <div class="cert-name">Production &amp; Operations Management</div>
-          <div class="cert-issuer">Great Learning</div>
-        </div>
+        <div><div class="cert-name">Production & Operations Management</div><div class="cert-issuer">Great Learning</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EDUCATION -->
 <section class="sec alt" id="education">
   <div class="inner">
     <div class="sec-label">Academic Background</div>
@@ -284,7 +251,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact-section" id="contact">
   <div class="inner">
     <div class="sec-label">Get In Touch</div>
@@ -292,26 +258,20 @@
     <div class="divider"></div>
     <p>If you believe my SAP MM skills and project experience align with your organization's needs, feel free to connect with me. I am open to full-time opportunities as an SAP MM Consultant.</p>
     <div class="contact-grid">
-      <a href="mailto:yash.dahake99@gmail.com" class="c-link">
-        <i class="ti ti-mail"></i> yash.dahake99@gmail.com
-      </a>
-      <a href="tel:+919503596026" class="c-link">
-        <i class="ti ti-phone"></i> +91 9503596026
-      </a>
-      <a href="https://www.linkedin.com/in/dahake-yash" target="_blank" class="c-link">
-        <i class="ti ti-brand-linkedin"></i> LinkedIn Profile
-      </a>
+      <a href="mailto:yash.dahake99@gmail.com" class="c-link"><i class="ti ti-mail"></i> yash.dahake99@gmail.com</a>
+      <a href="tel:+919503596026" class="c-link"><i class="ti ti-phone"></i> +91 9503596026</a>
+      <a href="https://www.linkedin.com/in/dahake-yash" target="_blank" class="c-link"><i class="ti ti-brand-linkedin"></i> LinkedIn Profile</a>
     </div>
   </div>
 </section>
 
-<footer>© 2026 Yash Dahake &middot; SAP MM Consultant &middot; Nagpur, Maharashtra</footer>
+<footer>© 2026 Yash Dahake · SAP MM Consultant · Nagpur, Maharashtra</footer>
 
 <script>
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
   a.addEventListener('click',function(e){
     e.preventDefault();
-    const target=document.querySelector(this.getAttribute('href'));
+    var target=document.querySelector(this.getAttribute('href'));
     if(target){target.scrollIntoView({behavior:'smooth',block:'start'});}
   });
 });
