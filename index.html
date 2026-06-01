@@ -16,15 +16,16 @@
     .nav-links a{color:#ccc;text-decoration:none;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;transition:color 0.2s}
     .nav-links a:hover{color:#c9a84c}
     .hero{background:#0a1628;padding:5rem 2rem 6rem;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(201,168,76,0.03) 0,rgba(201,168,76,0.03) 1px,transparent 1px,transparent 40px);pointer-events:none}
     .hero-badge{display:inline-block;background:rgba(201,168,76,0.15);border:1px solid #c9a84c;color:#c9a84c;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1rem;border-radius:20px;margin-bottom:1.5rem}
     .hero h1{font-family:'Playfair Display',serif;font-size:3.2rem;color:#fff;line-height:1.2;margin-bottom:0.75rem}
     .hero h1 span{color:#c9a84c}
     .hero-sub{color:#c9a84c;font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.25rem}
     .hero p{color:#a0aec0;font-size:0.95rem;max-width:620px;margin:0 auto 2.5rem;line-height:1.9;font-weight:300}
-    .hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-    .btn-gold{background:#c9a84c;color:#0a1628;padding:0.75rem 2rem;border-radius:4px;text-decoration:none;font-size:0.85rem;font-weight:500;display:inline-block}
+    .hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
+    .btn-gold{background:#c9a84c;color:#0a1628;padding:0.75rem 2rem;border-radius:4px;text-decoration:none;font-size:0.85rem;font-weight:500;display:inline-block;cursor:pointer}
     .btn-gold:hover{background:#e8c97a}
-    .btn-ghost{border:1px solid rgba(255,255,255,0.3);color:#fff;padding:0.75rem 2rem;border-radius:4px;text-decoration:none;font-size:0.85rem;display:inline-block}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.3);color:#fff;padding:0.75rem 2rem;border-radius:4px;text-decoration:none;font-size:0.85rem;display:inline-block;cursor:pointer}
     .btn-ghost:hover{border-color:#c9a84c;color:#c9a84c}
     .sec{padding:3.5rem 2rem}
     .sec.alt{background:#fff}
@@ -40,6 +41,8 @@
     .info-row i{color:#c9a84c;font-size:15px;margin-top:2px;flex-shrink:0}
     .info-row a{color:#ccc;text-decoration:none}
     .info-row a:hover{color:#c9a84c}
+    .cv-btn{display:flex;align-items:center;justify-content:center;gap:0.5rem;background:#c9a84c;color:#0a1628;padding:0.65rem 1rem;border-radius:4px;text-decoration:none;font-size:0.82rem;font-weight:600;margin-top:1.25rem;cursor:pointer;transition:background 0.2s}
+    .cv-btn:hover{background:#e8c97a}
     .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.65rem}
     .skill-pill{background:#fff;border:1px solid #e2ddd5;border-left:3px solid #c9a84c;border-radius:4px;padding:0.7rem 0.95rem;font-size:0.81rem;font-weight:500;color:#1a1a2e}
     .tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.55rem;margin-top:1.25rem}
@@ -72,8 +75,10 @@
     .contact-section .divider{margin:0 auto 1.75rem}
     .contact-section p{color:#a0aec0;font-size:0.9rem;max-width:520px;margin:0 auto 2.5rem;line-height:1.9}
     .contact-grid{display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap}
-    .c-link{display:flex;align-items:center;gap:0.45rem;border:1px solid rgba(201,168,76,0.4);color:#c9a84c;padding:0.65rem 1.3rem;border-radius:4px;text-decoration:none;font-size:0.82rem}
+    .c-link{display:flex;align-items:center;gap:0.45rem;border:1px solid rgba(201,168,76,0.4);color:#c9a84c;padding:0.65rem 1.3rem;border-radius:4px;text-decoration:none;font-size:0.82rem;cursor:pointer}
     .c-link:hover{background:rgba(201,168,76,0.1)}
+    .c-link-cv{display:flex;align-items:center;gap:0.45rem;background:#c9a84c;color:#0a1628;padding:0.65rem 1.3rem;border-radius:4px;text-decoration:none;font-size:0.82rem;font-weight:600;cursor:pointer}
+    .c-link-cv:hover{background:#e8c97a}
     footer{background:#07101f;text-align:center;padding:1.25rem;font-size:0.73rem;color:#4a5568}
     @media(max-width:640px){
       .hero h1{font-size:2.1rem}
@@ -124,12 +129,15 @@
       </div>
       <div class="info-card">
         <h3>Contact Details</h3>
-        <div class="info-row"><i class="ti ti-user"></i> Yash Dahake</div>
+        <div class="info-row"><i class="ti ti-user"></i> Yash Vikas Dahake</div>
         <div class="info-row"><i class="ti ti-map-pin"></i> Nagpur, Maharashtra</div>
         <div class="info-row"><i class="ti ti-phone"></i> +91 9503596026</div>
         <div class="info-row"><i class="ti ti-mail"></i><a href="mailto:yash.dahake99@gmail.com">yash.dahake99@gmail.com</a></div>
         <div class="info-row"><i class="ti ti-brand-linkedin"></i><a href="https://www.linkedin.com/in/dahake-yash" target="_blank">linkedin.com/in/dahake-yash</a></div>
         <div class="info-row"><i class="ti ti-language"></i> English, Hindi, Marathi</div>
+        <a href="YASH_DAHAKE_-_SAP_MM.pdf" download class="cv-btn">
+          <i class="ti ti-download"></i> Download CV
+        </a>
       </div>
     </div>
   </div>
@@ -157,14 +165,14 @@
       <div class="skill-pill">MM-FICO Integration</div>
     </div>
     <div style="margin-top:1.75rem">
-      <div class="sec-label" style="margin-bottom:0.5rem">Technical Tools</div>
+      <div class="sec-label" style="margin-bottom:0.5rem">Soft Skills</div>
       <div class="tech-grid">
-        <div class="tech-tag"><i class="ti ti-table"></i> MS Excel</div>
-        <div class="tech-tag"><i class="ti ti-chart-bar"></i> Pivot Tables</div>
-        <div class="tech-tag"><i class="ti ti-function"></i> VLOOKUP / XLOOKUP</div>
-        <div class="tech-tag"><i class="ti ti-file-text"></i> MS Word</div>
-        <div class="tech-tag"><i class="ti ti-presentation"></i> PowerPoint</div>
-        <div class="tech-tag"><i class="ti ti-chart-dots"></i> Basic Data Analysis</div>
+        <div class="tech-tag"><i class="ti ti-message"></i> Communication</div>
+        <div class="tech-tag"><i class="ti ti-handshake"></i> Negotiation</div>
+        <div class="tech-tag"><i class="ti ti-users"></i> Team Collaboration</div>
+        <div class="tech-tag"><i class="ti ti-bulb"></i> Problem Solving</div>
+        <div class="tech-tag"><i class="ti ti-zoom-check"></i> Attention to Detail</div>
+        <div class="tech-tag"><i class="ti ti-table"></i> MS Excel & MIS</div>
       </div>
     </div>
   </div>
@@ -180,7 +188,7 @@
         <div class="proj-title">SAP MM Implementation Project</div>
         <span class="badge">May 2025 – Present · 1 Year</span>
       </div>
-      <div class="proj-company"><i class="ti ti-building" style="font-size:13px;vertical-align:-1px"></i> Skillcloud Solutions Pvt. Ltd.</div>
+      <div class="proj-company"><i class="ti ti-building" style="font-size:13px;vertical-align:-1px"></i> SkillCloud Solutions · Nagpur, India</div>
       <ul class="proj-list">
         <li>Worked on Great Galleon business process mapping, procurement cycle handling and inventory management process flow.</li>
         <li>Assisted in configuration and testing of material master, vendor master and purchasing activities in SAP S/4HANA.</li>
@@ -212,7 +220,7 @@
     <div class="cert-grid">
       <div class="cert-card">
         <div class="cert-icon"><i class="ti ti-award"></i></div>
-        <div><div class="cert-name">SAP Certified Associate – SAP S/4HANA</div><div class="cert-issuer">Techtonic-Lab</div></div>
+        <div><div class="cert-name">SAP Certified Associate – SAP S/4HANA MM</div><div class="cert-issuer">Techtonic-Lab</div></div>
       </div>
       <div class="cert-card">
         <div class="cert-icon"><i class="ti ti-certificate"></i></div>
@@ -239,13 +247,13 @@
       <div class="edu-card">
         <div class="edu-deg">Master of Business Administration (MBA)</div>
         <div class="edu-school">Ajeenkya D.Y. Patil University, Pune</div>
-        <div class="edu-spec">Specialization: Operations and Management</div>
+        <div class="edu-spec">Specialization: Operations Management</div>
         <div class="edu-year">2022 – 2024</div>
       </div>
       <div class="edu-card">
-        <div class="edu-deg">Bachelor in Mass Media (BMM)</div>
+        <div class="edu-deg">Bachelor's in Mass Communication (BMM)</div>
         <div class="edu-school">Dhanwate National College, Nagpur</div>
-        <div class="edu-year">2017 – 2020</div>
+        <div class="edu-year">2018 – 2021</div>
       </div>
     </div>
   </div>
@@ -261,11 +269,12 @@
       <a href="mailto:yash.dahake99@gmail.com" class="c-link"><i class="ti ti-mail"></i> yash.dahake99@gmail.com</a>
       <a href="tel:+919503596026" class="c-link"><i class="ti ti-phone"></i> +91 9503596026</a>
       <a href="https://www.linkedin.com/in/dahake-yash" target="_blank" class="c-link"><i class="ti ti-brand-linkedin"></i> LinkedIn Profile</a>
+      <a href="YASH_DAHAKE_-_SAP_MM.pdf" download class="c-link-cv"><i class="ti ti-download"></i> Download CV</a>
     </div>
   </div>
 </section>
 
-<footer>© 2026 Yash Dahake · SAP MM Consultant · Nagpur, Maharashtra</footer>
+<footer>© 2026 Yash Vikas Dahake · SAP MM Consultant · Nagpur, Maharashtra</footer>
 
 <script>
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
